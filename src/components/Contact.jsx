@@ -10,7 +10,7 @@ function Contact() {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
-  // const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
@@ -28,30 +28,104 @@ function Contact() {
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
+  const nameFieldChecker = (e) => {
     e.preventDefault();
+    setErrorMessage('');
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    // if (!validateEmail(email) || !name) {
-    //   setErrorMessage('Email or name is invalid');
-    //   // We want to exit out of this code block if something is wrong so that the user can correct it
-    //   return;
-    //   // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
-    // }
-    // if (!checkPassword(password)) {
-    //   setErrorMessage(
-    //     `Choose a more secure password for the account: ${userName}`
-    //   );
-    //   return;
-    // }
-    // alert(`Hello ${userName}`);
+    if (!name) {
+      setErrorMessage('Name field cannot be empty');
+      return;
+    } else {
+      if (!email) {
+        setErrorMessage('Email field cannot be empty');
+        return;
+      } else if (!validateEmail(email)) {
+        setErrorMessage('Email is not valid');
+        return;
+      } else if (!message) {
+        setErrorMessage('Message field cannot be blank');
+        return;
+      }
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setName('');
-    setMessage('');
-    setEmail('');
-  };
+    }
+  }
+
+  const emailFieldChecker = (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    if (!email) {
+      setErrorMessage('Email field cannot be empty');
+      return;
+    } else {
+      if (!validateEmail(email)) {
+        setErrorMessage('Email is not valid');
+        return;
+      } else {
+        if (!name) {
+          setErrorMessage('Name field cannot be empty');
+          return;
+        } else if (!message) {
+          setErrorMessage('Message field cannot be blank');
+          return;
+        }
+      };
+    }
+  }
+
+  const messageFieldChecker = (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    if (!message) {
+      setErrorMessage('Message field cannot be empty');
+      return;
+    } else {
+      if (!name) {
+        setErrorMessage('Name field cannot be empty');
+        return;
+      } else if (!email) {
+        setErrorMessage('Email field cannot be empty');
+        return;
+      } else if (!validateEmail(email)){
+        setErrorMessage('Email is not valid');
+        return;
+      }
+
+    }
+  }
+
+
+
+
+
+
+
+
+  // const handleFormSubmit = (e) => {
+  //   // Preventing the default behavior of the form submit (which is to refresh the page)
+  //   e.preventDefault();
+
+  //   // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
+  //   // if (!validateEmail(email) || !name) {
+  //   //   setErrorMessage('Email or name is invalid');
+  //   //   // We want to exit out of this code block if something is wrong so that the user can correct it
+  //   //   return;
+  //   //   // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+  //   // }
+  //   // if (!checkPassword(password)) {
+  //   //   setErrorMessage(
+  //   //     `Choose a more secure password for the account: ${userName}`
+  //   //   );
+  //   //   return;
+  //   // }
+  //   // alert(`Hello ${userName}`);
+
+  //   // If everything goes according to plan, we want to clear out the input after a successful registration.
+  //   setName('');
+  //   setMessage('');
+  //   setEmail('');
+  // };
 
   return (
     <div className="container text-center">
@@ -80,11 +154,11 @@ function Contact() {
         />
         <button type="submit">Submit</button>
       </form>
-      {/* {errorMessage && (
+      {errorMessage && (
         <div>
           <p className="error-text">{errorMessage}</p>
         </div>
-      )} */}
+      )}
       <h4>Email me at jjsduncan@gmail.com</h4>
     </div>
   );
