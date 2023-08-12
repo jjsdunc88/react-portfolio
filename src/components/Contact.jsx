@@ -2,7 +2,7 @@ import { useState } from 'react';
 // import './style.css';
 
 // Here we import a helper function that will check if the email is valid
-import { checkPassword, validateEmail } from '../utils/helpers';
+import { validateEmail } from '../utils/helpers';
 
 function Contact() {
   // Create state variables for the fields in the form
@@ -129,12 +129,13 @@ function Contact() {
 
   return (
     <div className="container text-center">
-      <h1>Hello Please fill out contact form</h1>
-      <form className="form" onSubmit={handleFormSubmit}>
+      <h1>Please fill out contact form</h1>
+      <form className="form">
         <input
           value={email}
           name="email"
           onChange={handleInputChange}
+          onBlur={emailFieldChecker}
           type="email"
           placeholder="email"
         />
@@ -142,6 +143,7 @@ function Contact() {
           value={name}
           name="name"
           onChange={handleInputChange}
+          onBlur={nameFieldChecker}
           type="text"
           placeholder="name"
         />
@@ -149,6 +151,7 @@ function Contact() {
           value={message}
           name="message"
           onChange={handleInputChange}
+          onBlur={messageFieldChecker}
           type="text"
           placeholder="message"
         />

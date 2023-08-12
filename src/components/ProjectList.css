@@ -1,0 +1,43 @@
+#root {
+    padding: 0;
+}
+#works {
+ padding: 0;
+ list-style: none;   
+ display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ gap: 10px;
+}
+
+#works li {
+    position: relative;
+    width: calc(33% - 10px);
+}
+#works img {
+    width: 100%;
+}
+
+#works .link {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    background-color: gray;
+    opacity: 1;
+}
+#works .github {
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* background-color: gray; */
+    /* opacity: 1; */
+}
+
+
+@media screen AND (max-width: 768px) {
+    #works {
+        flex-direction: column;
+    }
+}
