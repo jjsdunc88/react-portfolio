@@ -3,10 +3,16 @@ import "./ProjectList.css";
 export default function ProjectList(){
   const projs = [
     {
-      name: "PWA Text Editor",
-      link: "https://pwa-text-editor-jake-9f6bf8284bfd.herokuapp.com/",
-      github: "https://github.com/jjsdunc88/pwa-text-editor",
-      screenshot: "https://user-images.githubusercontent.com/125617546/258664915-0e7d20d7-00d1-41c0-b8b6-f8e27348bfb6.png"
+      name: "FitGuide",
+      link: "https://health-wellness-intro-planner-15375fd8b435.herokuapp.com/",
+      github: "https://github.com/jjsdunc88/health-wellness-planner",
+      screenshot: "https://user-images.githubusercontent.com/125617546/265812337-1ccde5fd-6ad7-41b5-b7f2-de00fa989523.png"
+    },
+    {
+      name: "Musicale",
+      link: "https://musicale-app-f8a5312a774d.herokuapp.com/",
+      github: "https://github.com/ruggerheist/musicale",
+      screenshot: "https://github.com/ruggerheist/musicale/blob/main/public/images/deployed_app.gif?raw=true"
     },
     {
       name: "PWA Text Editor",
@@ -14,18 +20,12 @@ export default function ProjectList(){
       github: "https://github.com/jjsdunc88/pwa-text-editor",
       screenshot: "https://user-images.githubusercontent.com/125617546/258664915-0e7d20d7-00d1-41c0-b8b6-f8e27348bfb6.png"
     },
-    {
-      name: "PWA Text Editor",
-      link: "https://pwa-text-editor-jake-9f6bf8284bfd.herokuapp.com/",
-      github: "https://github.com/jjsdunc88/pwa-text-editor",
-      screenshot: "https://user-images.githubusercontent.com/125617546/258664915-0e7d20d7-00d1-41c0-b8b6-f8e27348bfb6.png"
-    },
-    {
-      name: "PWA Text Editor",
-      link: "https://pwa-text-editor-jake-9f6bf8284bfd.herokuapp.com/",
-      github: "https://github.com/jjsdunc88/pwa-text-editor",
-      screenshot: "https://user-images.githubusercontent.com/125617546/258664915-0e7d20d7-00d1-41c0-b8b6-f8e27348bfb6.png"
-    }
+    // {
+    //   name: "PWA Text Editor",
+    //   link: "https://pwa-text-editor-jake-9f6bf8284bfd.herokuapp.com/",
+    //   github: "https://github.com/jjsdunc88/pwa-text-editor",
+    //   screenshot: "https://user-images.githubusercontent.com/125617546/258664915-0e7d20d7-00d1-41c0-b8b6-f8e27348bfb6.png"
+    // }
   ]
 
   return (
