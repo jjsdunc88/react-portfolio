@@ -13,7 +13,7 @@ export default function Resume(){
     return (
       <nav>
         <h1>Resume</h1>
-        <iframe src="https://docs.google.com/document/d/e/2PACX-1vT0Wlu7UOXw8jP8Jtd7qXYbZxbQjwQY-TTJGN-90z_o9wJRk5NBaaZo5Zg1-K0VRAubY8MNiW3ZhDoS/pub?embedded=true"></iframe>
+        <iframe style={{"height":400, "width":800}} src="https://docs.google.com/document/d/e/2PACX-1vT0Wlu7UOXw8jP8Jtd7qXYbZxbQjwQY-TTJGN-90z_o9wJRk5NBaaZo5Zg1-K0VRAubY8MNiW3ZhDoS/pub?embedded=true"></iframe>
         <br/>
         <button onClick={(e) => {savePDF()}}
 >Download Resume</button> *
