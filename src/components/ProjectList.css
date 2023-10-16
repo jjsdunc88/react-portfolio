@@ -1,5 +1,6 @@
 #root {
     padding: 0;
+    
 }
 #works {
  padding: 0;
@@ -24,7 +25,7 @@
     left: 0;
     width: 100%;
     display: block;
-    background-color: gray;
+    /* background-color: gray; */
     opacity: 1;
 }
 #works .github {
@@ -35,6 +36,11 @@
     /* opacity: 1; */
 }
 
+.screenshot{
+    position: relative;
+    height:80%;
+    top:20px;
+}
 
 @media screen AND (max-width: 768px) {
     #works {

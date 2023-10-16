@@ -1,5 +1,7 @@
 import "./ProjectList.css";
 
+
+
 export default function ProjectList(){
   const projs = [
     {

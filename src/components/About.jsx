@@ -4,8 +4,12 @@ export default function About(){
       <nav>
         {/* <h1>About Me</h1>  */}
         <img src={picture}/>
+        
         <p>
-          Newly graduated software developer making my way in the world.
+          <b>Software Developer with eight years of experience in business operations management.</b>
+        </p>
+        <p>
+         <b> Currently living in Philadelphia, PA. </b>
         </p>
       </nav>
     )
