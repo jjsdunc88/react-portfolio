@@ -14,13 +14,13 @@ export default function ProjectList(){
       name: "Express Note Taker",
       link: "https://note-expressjs-taker.herokuapp.com/",
       github: "https://github.com/jjsdunc88/expressjs-note-taker",
-      screenshot: "src/assets/express note taker .png"
+      screenshot: "https://user-images.githubusercontent.com/125617546/275381129-a42ff307-8b62-4f7d-8e4e-4385ef78526b.png"
     },
     {
       name: "Unique Password Generator",
       link: "https://jjsdunc88.github.io/unique-password-generator/",
       github: "https://github.com/jjsdunc88/unique-password-generator",
-      screenshot: "src/assets/password generator.png"
+      screenshot: "https://raw.githubusercontent.com/jjsdunc88/unique-password-generator/main/assets/Screenshot%202023-04-02%20232734.png"
     },
     // {
     //   name: "PWA Text Editor",
